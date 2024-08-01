@@ -48,7 +48,15 @@ This project demonstrates a real-world application of data engineering using Mic
 
 
 
+## Conclusion and Limitations
 
+This project demonstrates the ability to create an end-to-end ETL cloud solution using Azure.  
+I tested this pipeline by adding 2 customers to the customerr table and triggering the pipeline to run. I also created a scheduled trigger. After the successful run of each trigger, I refreshed the Power BI report, which changed to reflect the new data from 847 customers to 849. This approach showed the data engineering pipeline worked as scheduled.
+
+Limitation
+   - The dataset used was small and did not require data cleaning (7mb total, 800 rows). This was done to keep compute + storage costs low for myself.
+
+According to this project, I have showcased how I used Microsoft Azure to create an end-to-end data engineering pipeline. This pipeline used data from the on-premise SQL server database and loaded the data in Azure Data Lake Gen 2 storage. I performed the necessary transformations using Azure Databricks and loaded the data in Azure SQL Database. Using two levels of transformations, I ensured the data was ready for different use cases. Thus, I extracted the data using Power BI and created a report for presentation to relevant stakeholders. This report represents a practical use case of Azure in data engineering in gathering data and making it ready and reliable for use.
 
 
 
