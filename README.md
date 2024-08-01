@@ -36,11 +36,11 @@ This project demonstrates a real-world application of data engineering using Mic
 ![database](https://github.com/SardarBoy/AzureDataEngineering1/blob/982239a2a018033ea9ca9c0667c57018233eab40/Database.png)
 
 2. **Data Transformation**
-   - Use Azure Databricks to transform the ingested data into the required format.
+   - Use Azure Databricks to transform the ingested data into the required format. After ingesting data into the "bronze" folder, it undergoes transformation following the data lake architecture (bronze, silver, gold), becoming suitable for business reporting tools like Power BI. Azure Databricks, using PySpark, handles these transformations. Azure Data Factory is configured to automatically execute these transformations with each pipeline run.
 ![databricks](https://github.com/SardarBoy/AzureDataEngineering1/blob/c1e943c805dbfc465a49e29d6e7ec7ab67549220/Data%20mounting%20and%20Transforming.png)
 
 3. **Data Loading**
-   - Load the transformed data into Azure Synapse Analytics.
+   - Load the transformed data into Azure Synapse Analytics and Create a link from Azure Storage (Gold Folder) to Azure Synapse.
 ![pipeline](https://github.com/SardarBoy/AzureDataEngineering1/blob/73438a92dbf7c0bc03c336ffef31c0eae08119be/Pipeline.png)
 
 4. **Data Visualization**
